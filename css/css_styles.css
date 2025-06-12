@@ -1,0 +1,131 @@
+/* Общие стили для всего сайта DROFTco */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Стили навбара */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: #ddd;
+}
+
+/* Стили для mainpage.html */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    gap: 10px;
+    margin-top: 30px;
+}
+.big-button {
+    position: relative;
+    background-color: #d3d3d3;
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    max-width: 300px;
+    border-radius: 10px;
+}
+.big-button:hover {
+    background-color: #b0b0b0;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 100;
+    width: 360px;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+.big-button:hover .dropdown-menu {
+    display: block;
+    max-height: 400px;
+    opacity: 1;
+}
+.dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0;
+}
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+.dropdown-item:hover {
+    background-color: #e0e0e0;
+}
+.dropdown-item img {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    order: 1;
+}
+.dropdown-item span {
+    flex: 1;
+}
+.dropdown-grid a:nth-child(2n) img {
+    margin-left: 0;
+    margin-right: 15px;
+    order: 0;
+}
+
+/* Стили для контента (все страницы) */
+.content {
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 80px auto 0; /* 80px учитывает навбар */
+}
+h1 {
+    font-size: 36px;
+    margin-top: 0;
+}
